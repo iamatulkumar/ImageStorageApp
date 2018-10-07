@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ViewImageRowVMBinding">
+
+        <import type="android.view.View"/>
+
+        <import
+            alias="ViewModel"
+            type="com.marsplay.test.marsplay.viewmodel.ViewImageRowVM"/>
+
+        <variable
+            name="viewModel"
+            type="ViewModel"/>
+
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_view_image_url"
+        android:layout_width="match_parent"
+        android:layout_height="180dp" />
+</RelativeLayout>
+</layout>

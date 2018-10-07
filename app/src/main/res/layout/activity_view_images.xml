@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ActivityViewImagesBinding">
+
+        <import type="android.view.View" />
+
+        <import
+            alias="ViewModel"
+            type="com.marsplay.test.marsplay.viewmodel.ViewImagesActivityVM" />
+
+        <variable
+            name="viewModel"
+            type="ViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ViewImagesActivity">
+
+        <TextView
+            android:id="@+id/tv_image_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Image List"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp"
+            android:textSize="32dp" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:onClick="@{(view) -> viewModel.onClickClose()}"
+            android:src="@drawable/ic_close"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_view_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_image_upload"
+            android:layout_marginTop="16dp"></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+</layout>
